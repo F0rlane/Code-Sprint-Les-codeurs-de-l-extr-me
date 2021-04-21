@@ -10,12 +10,12 @@ h1 {
 }
 
 body {
-    background: #5b1e61;
+    background: #ff6701;
     margin: 0;
 }
 
 .card {
-    background: #243572;
+    background: #fea82f;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ body {
 }
 
 .btn {
-    background: #1E2E61;
+    background: #ffc288;
     border: none;
     border-radius: 10px;
     color: white;
@@ -46,7 +46,7 @@ body {
 }
 
 .btn:hover {
-    background: #B9D1FF;
+    background: #fcecdd;
     border: none;
     color: black;
     cursor: pointer;
