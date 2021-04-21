@@ -120,3 +120,50 @@ function showRestartButton() {
     div.appendChild(button);
     button.addEventListener('click', () => document.location.reload(true));
 }
+
+// Charger une question à la fois sur le quizz
+function startQuiz(questionList) {
+    const numberOfQuestions = questionList.length - 1;
+    if (index === numberOfQuestions) {
+        setTitle('Your score was ' + score + '/10');
+        showRestartButton();
+        return;
+    }
+    setTitle(questionList[index].question);
+    setQuestionButtons(questionList, questionList[index].answers, questionList[index].correct);
+}
+
+// Créer un bouton pour chaque catégories de l'API
+async function setCategoryButtons() {
+    const categories = await fetchCategoriesFromAPI();
+    const buttonList = document.getElementById('buttons');
+
+    for (const category of categories) {
+        const button = document.createElement('button');
+        const text = document.createTextNode(category.name);
+        button.setAttribute('id', category.id);
+        button.classList.add('btn');
+        button.appendChild(text);
+        buttonList.appendChild(button);
+        button.addEventListener('click', () => categoryButtonEventHandler(button));
+    }
+}
+
+// Evénement au moment du clic sur un bouton
+async function categoryButtonEventHandler(button) {
+    const url = BASE_URL + '&category=' + button.id;
+    const list = await fetchQuestionsFromAPI(url);
+    if (list === false) {
+        alert('Could not load quiz. Try again later.');
+        return;
+    }
+    removeButtons();
+    startQuiz(list);
+}
+
+function main() {
+    setTitle('Quiz Categories');
+    setCategoryButtons();
+}
+
+main();
