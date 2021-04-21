@@ -167,3 +167,24 @@ function main() {
 }
 
 main();
+
+
+// integration API giphy
+var api = 'https://api.giphy.com/v1/gifs/search?';
+var apiKey = '&api_key=dc6zaTOxFJmzC';
+var query = '&q=rainbow';
+var url = api + apiKey + query;
+
+fetch(
+    url
+  )
+    .then((resonse) => resonse.json())
+    .then((response) => {
+        console.log(response);
+        const gif = response.data[0]
+        console.log(gif);
+        const url = gif.images.original.url
+        console.log(url);
+        let gifhtml = document.getElementById("gif");
+        gifhtml.src = url
+      });
