@@ -108,3 +108,15 @@ function removeQuestionNumber() {
     h1Element.classList.remove('number');
     h1Element.innerText = '';
 }
+
+// affichage du bouton restart à la fin du quizz
+function showRestartButton() {
+    removeQuestionNumber();
+    const div = document.getElementById('buttons');
+    const button = document.createElement('button');
+    const text = document.createTextNode('Restart');
+    button.classList.add('btn');
+    button.appendChild(text);
+    div.appendChild(button);
+    button.addEventListener('click', () => document.location.reload(true));
+}
