@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: 15px;
-    padding: 50px 50px 0px 50px;
+    padding: 50px 50px 50px 50px;
     text-align: center;
 }
 
@@ -54,4 +54,9 @@ body {
 
 .number {
     padding: 10px 0px 10px 0px;
+}
+
+#gif{
+    margin: auto;
+    display: block;
 }
