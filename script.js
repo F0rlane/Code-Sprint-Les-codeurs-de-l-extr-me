@@ -110,21 +110,8 @@ function removeQuestionNumber() {
 }
 
 // integration API giphy
-var api = 'https://api.giphy.com/v1/gifs/search?';
-var apiKey = '&api_key=dc6zaTOxFJmzC';
-var query = '&q=rainbow';
-var url = api + apiKey + query;
-
-fetch(
-    url
-  )
-    .then((resonse) => resonse.json())
-    .then((response) => {
-        const gif = response.data[0]
-        const url = gif.images.original.url
-        let gifhtml = document.getElementById("gif");
-        gifhtml.src = url
-      });
+const api = 'https://api.giphy.com/v1/gifs/search?';
+const apiKey = '&api_key=dc6zaTOxFJmzC';
 
 document.getElementById("gif").hidden = true;
 
@@ -138,6 +125,21 @@ function showRestartButton() {
     button.appendChild(text);
     div.appendChild(button);
     button.addEventListener('click', () => document.location.reload(true));
+    // affichage du gif
+    if(score >= 5){
+        var query = '&q=victory';
+    }else{
+        var query = '&q=defeat';
+    }
+    let url = api + apiKey + query;
+    fetch(url)
+    .then((resonse) => resonse.json())
+    .then((response) => {
+        const gif = response.data[0]
+        const url = gif.images.original.url
+        let gifhtml = document.getElementById("gif");
+        gifhtml.src = url
+      });
     document.getElementById("gif").hidden = false;
 }
 
