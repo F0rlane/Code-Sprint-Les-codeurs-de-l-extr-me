@@ -189,3 +189,17 @@ function main() {
 }
 
 main();
+
+// intégration de Deezer
+const deezerUrl = "https://api.deezer.com/";
+
+const track = "track/";
+var musicId = "124389230";
+
+musicUrl = deezerUrl + track + musicId;
+fetch(musicUrl)
+.then((response) => response.json())
+.then((response) => {
+    const deezer = response.data[0]
+    console.log(deezer);
+});
