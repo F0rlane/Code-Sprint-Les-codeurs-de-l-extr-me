@@ -7,6 +7,6 @@
 
 As part of a school project, we had to create an application or website concept using one or more APIs. 
 
-### Static Images
+### Logo 
 <img src="img/logo-ninjaquizz.png" alt="logo-ninjaquizz.png">
 
