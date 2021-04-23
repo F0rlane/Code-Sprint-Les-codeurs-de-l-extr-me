@@ -6,6 +6,7 @@
 * API Dad Random Jokes https://icanhazdadjoke.com/api
 
 As part of a school project, we had to create an application or website concept using one or more APIs. 
+
 You can access the app here : https://f0rlane.github.io/Code-Sprint-Les-codeurs-de-l-extreme/
 
 ### Logo 
