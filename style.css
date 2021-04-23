@@ -59,4 +59,6 @@ body {
 #gif{
     margin: auto;
     display: block;
+    border-radius: 10px;
 }
+
