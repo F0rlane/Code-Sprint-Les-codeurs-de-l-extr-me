@@ -87,3 +87,12 @@ p{
 .ninja{
     display: none;
 }
+.logo{
+    background: url("img/logo-ninjaquizz.png");
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    margin: auto;
+}
