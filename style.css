@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 h1 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto', cursive;
     font-size: 40px;
 }
 
@@ -11,7 +11,7 @@ h1 {
 
 body {
     margin: 0;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ff534a, #fe793e, #fe793e, #ff534a);
     animation: gradient 15s ease infinite;
 }
 @keyframes gradient {
