@@ -179,6 +179,7 @@ async function categoryButtonEventHandler(button) {
         alert('Could not load quiz. Try again later.');
         return;
     }
+    document.getElementById("jokebox").classList.add("ninja");
     removeButtons();
     startQuiz(list);
 }
