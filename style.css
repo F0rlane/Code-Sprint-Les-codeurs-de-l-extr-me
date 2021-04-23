@@ -60,3 +60,13 @@ body {
     margin: auto;
     display: block;
 }
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.btn-center{
+    margin: auto;
+}
